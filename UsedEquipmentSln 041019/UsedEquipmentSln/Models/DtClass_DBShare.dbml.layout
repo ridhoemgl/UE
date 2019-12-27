@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DtClass_DBShare">
+  <DataContextMoniker Name="/DtClass_DBShareDataContext" />
+  <nestedChildShapes>
+    <classShape Id="5c848258-2aed-4f8e-9841-bf3ace90e4d8" absoluteBounds="3, 0.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DtClass_DBShareDataContext/TBL_DWH_DISTRICT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="49efd599-0074-42e3-852e-e24f17218118" absoluteBounds="3.015, 1.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5dd9b20e-e980-44ff-94bd-da54e611dcac" absoluteBounds="0.5, 0.625, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/DtClass_DBShareDataContext/TBL_DWH_DEPARTMENT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d536f477-636f-4ea8-b695-da8c3c9af3c6" absoluteBounds="0.515, 1.085, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="140b0500-cefc-4287-bde2-950875ce73ea" absoluteBounds="5.625, 0.625, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DtClass_DBShareDataContext/TBL_DWH_DIVISION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a7424bf6-8731-47a1-a3a4-2cada14aab61" absoluteBounds="5.6400000000000006, 1.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

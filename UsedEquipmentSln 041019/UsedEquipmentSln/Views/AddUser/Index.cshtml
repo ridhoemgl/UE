@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment";
+    ViewBag.dashboard = "Administrator";
+    ViewBag.dashboardSmall = "Add User";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+
+<div class="panel panel-flat">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-1"><label class="pull-left">NRP</label></div>
+            <div class="col-md-2">
+                <input type="text" id="txt_nrp" class="form-control" style="width: 100%" disabled/>
+            </div>
+            <div class="col-md-1"><button class="btn btn-primary" id="btn_load" onclick="loadEmployee()">--</button></div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-1"><label class="pull-left">GP</label></div>
+            <div class="col-md-2">
+                <input type="text" id="txt_gp" style="width: 100%" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-1"><label class="pull-left">Distrik</label></div>
+            <div class="col-md-2">
+                <input type="text" id="txt_distrik" style="width: 100%" />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <button class="btn btn-primary" id="btn_insert" onclick="Insert()">Insert</button>
+                <button class="btn btn-default" id="btn_back" onclick="Cancel()">Cancel</button>
+            </div>
+        </div>
+        <br />
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div id="wnd_addUser" style="padding:20px;display:none">
+        <div id="grid_emp"></div>
+    </div>
+</div>
+
+<script type="text/x-kendo-tmpl" id="lblSelect">
+    <span class="icon icon-select2"></span>&nbsp;&nbsp;Select
+</script>
+
+<script type="text/javascript" src="@ViewBag.pathParent/Js/AddUser.js"></script>

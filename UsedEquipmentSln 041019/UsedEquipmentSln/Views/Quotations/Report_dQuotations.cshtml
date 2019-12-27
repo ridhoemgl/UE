@@ -1,0 +1,99 @@
+﻿
+@{
+    Layout = null;
+    int idx = 1;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Attachments Report</title>
+    <link href="~/ContectLayout/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/ContectLayout/css/a4page.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="book">
+        <div class="page">
+            <div class="panel panel-flat">
+                <div class="panel-body">
+                    <div class="row">
+                        <img src="~/ContectLayout/img/LOGO_PAMAPERSADA.png" style="max-width: 100%;display: block;" />
+                    </div>
+
+                    <div class="row" style="margin-top:10px;font-size:10px">
+                        <div class="col-md-12 ">
+                            <div class="col-md-9" style="margin-left:45rem">
+                                Document No : @ViewBag.DOC
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-10" style="margin-left:45rem">
+                                Date<u style="visibility:hidden">------------</u>: @ViewBag.DATE
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="margin-left:45rem">
+                            <div class="col-md-10">
+                                Page<u style="visibility:hidden">------------</u>: @ViewBag.PAGE / 2
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="margin-left:45rem">
+                            <div class="col-md-10">
+                                Currency<u style="visibility:hidden">-------</u>: IDR / USD
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h3><u>ATTACHMENT</u></h3>
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-size:12px; margin-top:20px">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <table id="header-table" border="1" style="width:100%">
+                                    <tr>
+                                        <th class="text-center"><b>NO</b></th>
+                                        <th class="text-center"><b>UNIT</b></th>
+                                        <th class="text-center"><b>S/N </b></th>
+                                        <th class="text-center"><b>C/N </b></th>
+                                        <th class="text-center"><b>HOUR METER </b></th>
+                                        <th class="text-center"><b>PROD YEAR</b></th>
+                                        <th class="text-center"><b>PRICE</b></th>
+                                        <th class="text-center"><b>LOCATION</b></th>
+                                    </tr>
+                                    @foreach (var data in ViewBag.Data)
+                                        {
+                                            <tr>
+                                                <td class="text-center"> @idx </td>
+                                                <td class="text-center"> @data.QTY </td>
+                                                <td class="text-center"> @data.SN</td>
+                                                <td class="text-center"> @data.CN</td>
+                                                <td class="text-center"> @data.HM</td>
+                                                <td class="text-center"> @data.PROD_YEAR</td>
+                                                <td class="text-center"> @data.UNIT_PRICE </td>
+                                                <td class="text-center"> @data.LOCATION  </td>
+                                            </tr>
+                                            idx++;
+                                        }
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        window.print();
+        setTimeout(window.close, 0);
+    });
+</script>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_SHARE" Class="DtClass_DBShareDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=JIEPSQDV403;Initial Catalog=DB_SHARE;Persist Security Info=True;User ID=leader_user" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_SHAREConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_DWH_DISTRICT" Member="TBL_DWH_DISTRICTs">
+    <Type Name="TBL_DWH_DISTRICT">
+      <Column Name="DSTRCT_CODE" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DSTRCT_NAME" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DSTRCT_STATUS" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PLANT_AREA" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_DWH_DEPARTMENT" Member="TBL_DWH_DEPARTMENTs">
+    <Type Name="TBL_DWH_DEPARTMENT">
+      <Column Name="DSTRCT_CODE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="DEPT_CODE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="DEPT_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DIV_CODE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="DIV_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPT_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DISTRICT_CODE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="DEPT_CODE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DIV_CODE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID_DEPT" Type="System.String" DbType="VarChar(9) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DEPT_CODE_DESC_INITCAP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DIV_CODE_DESC_INITCAP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATION_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DEPT_CODE_V1" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="DEPT_CODE_V2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_DWH_DIVISION" Member="TBL_DWH_DIVISIONs">
+    <Type Name="TBL_DWH_DIVISION">
+      <Column Name="DIV_CODE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="DIV_CODE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DIV_CODE_DESC_INITCAP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATION_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment Dashboard";
+    ViewBag.dashboard = "Administrator";
+    ViewBag.dashboardSmall = "Mapping Menu";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+
+<div class="panel panel-flat">
+    <div class="panel-body">
+        <div class="form-group">
+            <label class="control-label col-md-1">Profile</label>
+            <div class="col-md-2">
+                <input type="text" id="txt_profile" style="width: 100%" />
+            </div>
+        </div>
+        <br />
+        <div id="grid"></div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-2">
+                <button class="btn btn-primary" id="btn_insert" onclick="Save()"><i class="glyphicon glyphicon-save"></i> Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="tmplt_is_check" type="text/x-kendo-tmpl">
+    <center><input type="checkbox" id="IS_SELECTED_check#=pid#" name="IS_SELECTED_check#=pid#" /></center>
+</script>
+<script id="tmplt_a" type="text/x-kendo-tmpl">
+    <center><input type="checkbox" id="IS_SELECTED_a#=pid#" name="IS_SELECTED_a#=pid#" /></center>
+</script>
+<script id="tmplt_d" type="text/x-kendo-tmpl">
+    <center><input type="checkbox" id="IS_SELECTED_d#=pid#" name="IS_SELECTED_d#=pid#" /></center>
+</script>
+<script id="tmplt_e" type="text/x-kendo-tmpl">
+    <center><input type="checkbox" id="IS_SELECTED_e#=pid#" name="IS_SELECTED_e#=pid#" /></center>
+</script>
+<script id="tmplt_r" type="text/x-kendo-tmpl">
+    <center><input type="checkbox" id="IS_SELECTED_r#=pid#" name="IS_SELECTED_r#=pid#" /></center>
+</script>
+
+<script type="text/javascript" src="@ViewBag.pathParent/Js/MappingMenu.js"></script>

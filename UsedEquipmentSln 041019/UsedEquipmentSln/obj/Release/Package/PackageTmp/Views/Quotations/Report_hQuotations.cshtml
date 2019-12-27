@@ -1,0 +1,195 @@
+﻿
+@{
+    Layout = null;
+    int idx = 1;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Quotations Report</title>
+    <link href="~/ContectLayout/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/ContectLayout/css/a4page.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="book">
+        <div class="page">
+            <div class="panel panel-flat">
+                <div class="panel-body">
+                    <div class="row" >
+                        <img src="~/ContectLayout/img/LOGO_PAMAPERSADA.png" style="max-width: 100%;display: block;" />
+                    </div>
+
+                    <div class="row" style="margin-top:10px;font-size:10px">
+                        <div class="col-md-12 ">
+                            <div class="col-md-9" style="margin-left:45rem">
+                                Document No : @ViewBag.DOC
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-10" style="margin-left:45rem">
+                                Date<u style="visibility:hidden">------------</u>: @ViewBag.DATE
+                            </div>
+                        </div>
+                        <div class="col-md-12" style="margin-left:45rem">
+                            <div class="col-md-10">
+                                Page<u style="visibility:hidden">------------</u>: @ViewBag.PAGE / 2
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h3><u>QUOTATION</u></h3>
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-size:12px; margin-top:20px">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <label>Title : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@ViewBag.TITLE</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-size:12px;margin-top:20px">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <label><b>Dear @ViewBag.TO,</b></label>
+                            </div>
+                            <div class="col-md-12">
+                                We are kindly submitting our quotation for Pama's Used Equiptment as follows:
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 text-right" style="font-size:12px">
+                            <div class="col-md-12">Currency  : IDR / USD</div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-size:12px; margin-top:10px">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <table id="header-table" border="1" style="width:100%">
+                                    <tr>
+                                        <th class="text-center"><b>No.</b></th>
+                                        <th class="text-center"><b>Description</b></th>
+                                        <th class="text-center"><b>Qty </b></th>
+                                        <th class="text-center"><b>Unit Price</b></th>
+                                        <th class="text-center"><b>Amount</b></th>
+                                    </tr>
+
+                                    @foreach (var data in ViewBag.Data)
+                                    {
+                                        <tr>
+                                            <td class="text-center"> @idx </td>
+                                            <td class="text-center"> @data.MODEL </td>
+                                            <td class="text-center"> @data.QTY </td>
+                                            <td class="text-center"> @data.UNIT_PRICE </td>
+                                            <td class="text-center"> @data.AMOUNT </td>
+                                        </tr>
+                                        idx++;
+                                    }
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-size:12px;margin-top:10px">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <label><b>TOTAL PRICE : </b></label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-size:12px;margin-top:20px">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <label><b>CONDITIONS : </b></label>
+                            </div>
+                            <div class="col-md-12">
+                                <ol style="font-size:10px">
+                                    <li style="padding-left: 10px"> This quotation is valid for seven (7) days from the date of submission. </li>
+                                    <li style="padding-left: 10px"> The unit are subject to prior sales. </li>
+                                    <li style="padding-left: 10px"> @ViewBag.NO3 </li>
+                                    <li style="padding-left: 10px"> 30% Non refundable down payment that should be paid before @ViewBag.NO4 </li>
+                                    <li style="padding-left: 10px"> Completion / Delivery date maximum @ViewBag.NO5 </li>
+                                    <li style="padding-left: 10px"> The unit are AsIs and WhereIs condition </li>
+                                    <li style="padding-left: 10px"> The SELLER will be entitled as the rightful owner of the payment and the Used Heavy Equipment <br /> if the PURCHASER fails to fulfill payment and release the Used Heavy Equipment  before the date of @ViewBag.NO7 </li>
+                                    <li style="padding-left: 10px"> If the equipment to be exported, B/L and export document should be registered and/or issued for PT Pamapersada Nusantara  As the shipper </li>
+                                    <li style="padding-left: 10px"> Term of Delivery @ViewBag.NO9</li>
+                                    <li style="padding-left: 10px"> Term of Delivery @ViewBag.N10</li>
+                                    <li style="padding-left: 10px"> Term of Delivery @ViewBag.N11</li>
+                                    <li style="padding-left: 10px"> Term of Delivery @ViewBag.N12</li>
+                                    <li style="padding-left: 10px"> Term of Delivery @ViewBag.N13</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-size:10px;margin-top:20px">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                We hope our quotation could meet your requirement and if you need any further information, please do not hesitate to contact us.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:20px">
+                        <div class="col-md-12" style="font-size:12px;margin-left:44rem">
+                            Yours Sincerely
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:10px">
+                        <div class="col-md-12" style="font-size:12px;margin-left:44rem">
+                            <label><b>PT Pamapersada Nusantara</b></label>
+                        </div>
+
+                        <div class="col-md-12" style="font-size:12px;margin-left:44rem;margin-top:50px">
+                            <label><b>@ViewBag.NAMA</b></label>
+                        </div>
+                        <div class="col-md-12" style="font-size:12px;margin-left:44rem">
+                            @*<label><b>@ViewBag.JABATAN</b></label>*@ 
+                            <label><b>Used Equipment Dept. Head</b></label> 
+                        </div>
+                    </div>
+
+                    <div class="row" style="font-size:10px;margin-top:10px">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                Used Equipment Marketing Dept
+                            </div>
+                            <div class="col-md-12" style="margin-top:5px">
+                                Phone &nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;+6221 460 2015 (Hunting)
+                            </div>
+                            <div class="col-md-12">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Hermawan Wijaya
+                            </div>
+                            <div class="col-md-12">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Asep Samsudin
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/assets/jquery-3.2.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        window.print();
+        setTimeout(window.close, 0);
+    });
+</script>

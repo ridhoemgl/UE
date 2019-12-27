@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment Dashboard";
+    ViewBag.dashboard = "Administrator";
+    ViewBag.dashboardSmall = "Mapping User";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+
+<div class="panel panel-flat">
+    <div class="panel-body">
+        <div class="form-group">
+            <label class="control-label col-md-1">Profile</label>
+            <div class="col-md-2">
+                <input type="text" id="txt_profile" style="width: 100%" />
+            </div>
+        </div>
+        <br />
+        <div id="grid"></div>
+        <br />
+    </div>
+</div>
+
+<script type="text/javascript" src="@ViewBag.pathParent/Js/MappingUser.js"></script>

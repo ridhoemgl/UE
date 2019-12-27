@@ -1,0 +1,183 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment";
+    ViewBag.dashboard = "Penjualan & Ivoicing";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="txt_nrp" value="@ViewBag.NRP" disabled />
+<input type="hidden" id="txt_cn" disabled />
+
+<div class="panel panel-flat" style="margin-top:10px">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div id="grid_ivoicing">
+
+                </div>
+            </div>
+        </div><br />
+    </div>
+</div>
+<div id="wnd_customer" class="col-lg-12" style="display:none">
+    <div id="grid_customer">
+
+    </div>
+</div>
+
+<div id="wnd_set_params" style="display:none">
+    <div class="panel panel-info">
+        <div class="panel-heading" style="font-size:15px; text-align:left; font-family:Helvetica;">Input Detail</div>
+        <div class="panel-body clearfix">
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:90px;">Customer Name</label>
+                <div class="col-md-3">
+                    <form class="form-inline mr-auto">
+                        <input type="hidden" id="txt_cus_id" />
+                        <input id="txt_cusname" readonly maxlength="30" type="text" class="k-textbox" placeholder="Search Customer" aria-label="Search" style="width:100%; border-color:#00bcd4">
+                        <button type="button" id="btn_browse_customer">browse..</button>
+                    </form>
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:90px;">Sales Status</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_sales_status" class="k-textbox" style="width: 100%;" />
+                </div>
+            </div>
+            <br /><br />
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:90px;">PJB Number</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_pjb_number" class="k-textbox" style="width: 100%; height:50%" class="form-control" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:90px;">Selling Price</label>
+                <div class="col-md-3">
+                    <input type="text" maxlength="18" id="txt_selling_price" class="k-textbox" style="width: 100%; height:50%" class="form-control" />
+                </div>
+            </div><br>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:90px;">Mediator:</label>
+                <div class="col-md-3">
+                    <input type="text" maxlength="40" id="txt_mediator" class="k-textbox" style="width: 100%; height:50%" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:90px;">Invoice Number</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_invoice" class="k-textbox" style="width: 100%; height:50%" />
+                </div>
+            </div><br>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:90px;">Invoice Date</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_invoice_date" style="width: 100%; height:50%" class="form-control" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:90px;">Amount Invoice</label>
+                <div class="col-md-3">
+                    <input type="text" maxlength="18" id="txt_amount_invoice" class="k-textbox" style="width: 100%; height:50%" class="form-control" />
+                </div>
+            </div><br />
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:90px;">Factur Number</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_factur_number" class="k-textbox" style="width: 100%; height:50%" class="form-control" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:90px;">Factur Date</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_facture_date" style="width: 100%; height:50%" class="form-control" />
+                </div>
+            </div><br />
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:90px;">Factur Status</label>
+                <div class="col-md-3">
+                    <input type="text" class="k-textbox" id="txt_facture_status" style="width: 100%; height:50%" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:90px;">Amount Factur</label>
+                <div class="col-md-3">
+                    <input type="text" maxlength="18" class="k-textbox" id="txt_amount_factur" style="width: 100%; height:50%" />
+                </div>
+            </div><br />
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:90px;">Invoice Status</label>
+                <div class="col-md-3">
+                    <input type="text" class="k-textbox" id="txt_invoice_status" style="width: 100%; height:50%" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:90px;">Export / Domestik</label>
+                <div class="col-md-3">
+                    <input type="text" maxlength="18" class="k-textbox" id="txt_exdom" style="width: 100%; height:50%" />
+                </div>
+            </div><br />
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:90px;">Sales Term</label>
+                <div class="col-md-3">
+                    <input type="text" class="k-textbox" id="txt_sales_term" style="width: 100%; height:50%" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:90px;">Delivery Term</label>
+                <div class="col-md-3">
+                    <input type="text" maxlength="18" class="k-textbox" id="txt_deliv_term" style="width: 100%; height:50%" />
+                </div>
+            </div><br />
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:90px;">Delivery Locations</label>
+                <div class="col-md-3">
+                    <input type="text" class="k-textbox" id="txt_deliv_locations" style="width: 100%; height:50%" />
+                </div>
+                <div class="col-md-1"></div>
+            </div><br />
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:90px;">Price Incl.VAT (Rp)</label>
+                <div class="col-md-3">
+                    <input type="text" class="k-textbox" id="txt_incl_vat_id" style="width: 100%; height:50%" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:90px;">Price Incl. VAT (USD)</label>
+                <div class="col-md-3">
+                    <input type="text" maxlength="18" class="k-textbox" id="txt_incl_vat_us" style="width: 100%; height:50%" />
+                </div>
+            </div><br />
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:90px;">Price Excl.VAT (Rp)</label>
+                <div class="col-md-3">
+                    <input type="text" class="k-textbox" id="txt_excl_vat_id" style="width: 100%; height:50%" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:90px;">Price Excl.VAT (USD)</label>
+                <div class="col-md-3">
+                    <input type="text" maxlength="18" class="k-textbox" id="txt_excl_vat_us" style="width: 100%; height:50%" />
+                </div>
+            </div><br />
+            
+            <div class="form-group">
+            <br />
+                <label class="control-label col-md-12 text-left">Conditional Detail</label>
+
+                <div class="col-md-12">
+                    <textarea rows="4" id="txt_conditional_detail" class="col-md-11"></textarea>
+                </div>
+            </div>
+            </div>
+            <hr />
+            <div class="text-left" style="margin-left:20px;">
+                <button id="btn_save" class="btn btn-primary save">Save <span class="glyphicon glyphicon-save"></span></button>
+                <button id="btn_cancel" class="btn btn-secondary cancel" onclick="$('#wnd_set_params').data('kendoWindow').close();"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            </div>
+        <br />
+        </div>
+    </div>
+<script type="text/javascript" src="@ViewBag.pathParent/Js/penjualanInvoicing.js"></script>

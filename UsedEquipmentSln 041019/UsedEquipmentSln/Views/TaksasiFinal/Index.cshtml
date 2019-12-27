@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewBag.Title = "Integrated System Used Equipment";
+    ViewBag.dashboard = "Taksasi Final";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="txt_nrp" value="@ViewBag.NRP" />
+
+<div class="panel panel-flat" style="margin-top:10px">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div id="grid"></div>
+            </div>
+        </div><br />
+    </div>
+</div>
+
+<div class="col-md-12" id="wnd_taksasi_final" style="display:none">
+    <div class="panel panel-info">
+        <div class="panel-heading" style="font-size:15px; text-align:left; font-family:Helvetica;">Taksasi Final</div>
+        <div class="panel-body clearfix">
+            <br>
+            <div class="form-group">
+                <label class="control-label col-md-12" style="width:150px;"><strong>DETAIL 1</strong></label>
+            </div><br>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div id="grid_detail_ur6_detail1"></div>
+                </div>
+            </div>
+            <div class="col-md-12" style="height:30px;">
+
+            </div>
+            <br />
+            <div class="form-group">
+                <label class="control-label col-md-12" style="width:150px;"><strong>DETAIL 2</strong></label><br><br><br>
+                <div class="col-md-12">
+                    <input type="text" id="txt_search" style="width: 170px; height:25px; background-color: #ececec" class="form-control" placeholder="Search" />
+                    <button class="btn btn-mdb-color btn-rounded btn-sm my-0 ml-sm-2 waves-effect waves-light" type="button" id="btn_search" onclick="searchData()" style="background:#00bcd4; color:white; margin-top: 5px">Search</button>
+                    <br><br>
+                </div>
+                <br><br>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div id="grid_detail_ur4_detail2"></div>
+                </div>
+            </div>
+            <div class="col-md-12" style="height:30px;">
+
+            </div>
+            <br />
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">Suggestion Price :</label>
+                <div class="col-md-3">
+                    <input type="text" class="k-textbox" id="txt_price" maxlength="13" style="width: 100%; height:35px;" placeholder="Price..." />
+                    <br><br><br>
+                    <div class="col-md-12" style="height:30px;">
+
+                    </div>
+                    <button id="btn_save" class="btn btn-primary save" onclick="saveDetail()">Save <span class="glyphicon glyphicon-save"></span></button>
+                    <button id="btn_cancel" class="btn btn-secondary cancel" onclick="cancelDetail()"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                </div>
+            </div><br>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="@ViewBag.pathParent/Js/TaksasiFinal.js"></script>
+
+

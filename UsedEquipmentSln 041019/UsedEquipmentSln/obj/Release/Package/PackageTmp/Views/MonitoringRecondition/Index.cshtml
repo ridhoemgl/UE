@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment";
+    ViewBag.dashboard = "Monitoring Recondition";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="txt_cn" disabled />
+<style>
+    .k-window div.k-window-content {
+        overflow: hidden;
+    }
+</style>
+<div id="wnd_upload_data" style="display:none">
+    <div class="form-group row">
+        <div class="col-md-11">
+            <div class="panel panel-default ">
+                <div class="panel-body clearfix">
+                    <h6>Masukkan File Excel (.xlsx)</h6>
+                    <input type="file" id="fl_upload_exel" name="fl_excel" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-flat" style="margin-top:10px">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div id="grid_monitoring"></div>
+            </div>
+        </div><br />
+        <div class="col-md-12" style="height:0px;">
+        </div>
+    </div>
+</div>
+<div class="col-md-12" id="wnd_update_monitoring" style="display:none">
+    <div class="panel panel-info">
+        <div class="panel-heading" style="font-size:15px; text-align:left; font-family:Helvetica;">Update Monitoring</div>
+        <div class="panel-body clearfix">
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">Location</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_location" class="k-textbox" style="width: 100%;" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px;">Percentage:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_percent" class="k-textbox" maxlength="6" style="width: 100%;" />
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">Start Date:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_start" style="width: 100%; height:50%" class="form-control" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px;">Finish Date:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_finish" style="width: 100%; height:50%" class="form-control" />
+                </div>
+            </div><br>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">Status:</label>
+                <div class="col-md-3">
+                    <input type="text" id="drp_prog" style="width: 100%; height:50%" class="form-control" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px;">Process:</label>
+                <div class="col-md-3">
+                    <input type="text" id="drp_proc" style="width: 100%; height:50%" class="form-control" />
+                </div>
+            </div><br>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">Actual Date:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_actual" style="width: 100%; height:50%" class="form-control" />
+                </div>
+            </div>
+            <br />
+            <hr />
+                <div class="text-left">
+                    <button id="btn_save" class="btn btn-primary save">Save <span class="glyphicon glyphicon-save"></span></button>
+                    <button id="btn_cancel" class="btn btn-secondary cancel" onclick="$('#wnd_update_monitoring').data('kendoWindow').close();"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                </div>
+            </div>
+    </div>
+</div>
+<script id="aplut" type="text/x-kendo-template">
+    <a class="k-button" href="\#" onclick="return upload_wnd()"><span class="k-icon k-i-plus k-flip-h"></span> Upload Excel</a>
+</script>
+<script id="dowload_ex" type="text/x-kendo-template">
+    <a class="k-button" href="\#" onclick="return download_excel()"><span class="k-icon k-i-plus k-flip-h"></span> Download Template Excel</a>
+</script>
+<script type="text/javascript" src="@ViewBag.pathParent/Js/MonitoringRecondition.js"></script>

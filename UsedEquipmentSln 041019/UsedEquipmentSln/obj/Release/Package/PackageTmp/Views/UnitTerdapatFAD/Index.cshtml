@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment";
+    ViewBag.dashboard = "Unit Terdapat FAD";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" value="@ViewData["sPID"]" />
+<input type="hidden" id="txt_user_nrp" value="@ViewBag.NRP" readonly />
+
+<style>
+    #wnd_update_fad {
+        overflow: hidden;
+    }
+</style>
+<div id="wnd_upload_data" style="display:none">
+    <div class="form-group row">
+        <div class="col-md-11">
+            <div class="panel panel-default ">
+                <div class="panel-body clearfix">
+                    <h6>Masukkan File Excel (.xlsx)</h6>
+                    <input type="file" id="fl_upload_exel" name="fl_excel" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-flat" style="margin-top:10px">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div id="grid"></div>
+            </div>
+        </div><br />
+    </div>
+</div>
+<div class="col-md-12" id="wnd_detail_fad" style="display:none">
+    <div class="panel panel-info">
+        <div class="panel-heading" style="font-size:15px; text-align:left; font-family:Helvetica;">FAD Detail</div>
+        <div class="panel-body clearfix">
+
+            <br> 
+            <div class="form-group">
+                <label class="control-label col-md-12" style="width:150px;"><strong>FAD DETAIL 1</strong></label>
+            </div><br>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div id="grid_detail_ur_fn1"></div>
+                </div>
+            </div>
+            <div class="col-md-12" style="height:30px;">
+
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="control-label col-md-12" style="width:150px;"><strong>FAD DETAIL 2</strong></label>
+            </div><br>
+            <input type="hidden" id="id_cn" />
+            <input type="hidden" id="id_district" />
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div id="grid_detail_ur_fn2"></div>
+                </div>
+            </div>
+            <div class="col-md-12" style="height:30px;">
+
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="control-label col-md-12" style="width:150px;"><strong>FAD DETAIL 3</strong></label>
+            </div><br>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div id="grid_detail_ur_fn3"></div>
+                </div>
+            </div><br />
+
+        </div>
+        </div>       
+</div>
+<div class="col-md-12" id="wnd_update_fad" style="display:none">
+    <div class="panel panel-info">
+        <div class="panel-heading" style="font-size:15px; text-align:left; font-family:Helvetica;">FAD Detail</div>
+        <div class="panel-body clearfix">
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">ETD:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_etd" style="width: 100%; height:50%" class="form-control" />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px;">ETA:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_eta" style="width: 100%; height:50%" class="form-control" />
+                </div>
+            </div><br>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">Status:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_status_ur2" style="width: 100%; height:50%" class="form-control" />
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">Remark:</label>
+                <div class="col-md-12" style="padding-left:10px">
+                    <textarea class="form-control" rows="6" id="ta_remark" placeholder="Remark" style="width:612px"></textarea>
+                </div>
+            </div>
+
+            <div class="col-md-12" style="height:30px;">
+
+            </div>
+            <div style="text-align:left; padding-left:30px">
+                <button id="btn_save" class="btn btn-primary save" onclick="saveDetail()">Save <span class="glyphicon glyphicon-save"></span></button>
+                <button id="btn_cancel" class="btn btn-secondary cancel" onclick="cancelDetail()"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            </div><br />
+        </div>
+    </div>
+</div>
+<script id="aplut" type="text/x-kendo-template">
+    <a class="k-button" href="\#" onclick="return upload_wnd()"><span class="k-icon k-i-plus k-flip-h"></span> Upload Excel</a>
+</script>
+<script id="dowload_ex" type="text/x-kendo-template">
+    <a class="k-button" href="\#" onclick="return download_excel()"><span class="k-icon k-i-plus k-flip-h"></span> Download Template Excel</a>
+</script>
+<script type="text/javascript" src="@ViewBag.pathParent/Js/UnitTerdapatFAD.js"></script>
+

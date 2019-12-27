@@ -1,0 +1,900 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_SM_USEQ" Class="DtClass_UsedEquipmentDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=jiepsqco424;Initial Catalog=DB_SM_USEQ;Persist Security Info=True;User ID=useq_user" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_SM_USEQConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="app.Menu_GP" Member="Menu_GPs">
+    <Type Name="Menu_GP">
+      <Column Name="Primer" Type="System.Int64" DbType="BigInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GP_ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Permission" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="A" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="D" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="E" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="R" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_Profile" Member="TBL_Profiles">
+    <Type Name="TBL_Profile">
+      <Column Name="GP_ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Is_active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Accept_by" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Create_OnDistrict" Type="System.String" DbType="NChar(4)" CanBeNull="true" />
+      <Column Name="Create_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Update_by" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="Update_date" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Update_OnDistrict" Type="System.String" DbType="NChar(4)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_USER" Member="TBL_USERs">
+    <Type Name="TBL_USER">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="GP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DISTRIK" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Autorize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_UR001_SUMMARY" Member="VW_UR001_SUMMARies">
+    <Type Name="VW_UR001_SUMMARY">
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="JUMLAH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_M_STATUS_UR001" Member="TBL_M_STATUS_UR001s">
+    <Type Name="TBL_M_STATUS_UR001">
+      <Column Name="STATUS_PID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="STATUS_DESC" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_T_LAST_TRANSACTION_UNIT" Member="TBL_T_LAST_TRANSACTION_UNITs">
+    <Type Name="TBL_T_LAST_TRANSACTION_UNIT">
+      <Column Name="CN" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DSTRCT_CODE" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="STATUS_PID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.menu" Member="menus">
+    <Type Name="menu">
+      <Column Name="Primer" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Menu" Member="Menu1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Menu_link" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Urutan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Style_css" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Span_class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GP_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Permission" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="A" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="D" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="E" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="R" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_Employee" Member="vw_Employees">
+    <Type Name="vw_Employee">
+      <Column Name="ID_EMPLOYEE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_ID" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="FIRST_NAME" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="SURNAME" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(43)" CanBeNull="true" />
+      <Column Name="POSITION_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="POS_TITLE" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="CHANGE_REASON" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CHANGE_REASON_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DSTRCT_CODE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="WORK_LOC" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="WORK_LOC_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EMP_STATUS" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="EMP_STATUS_DESC" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="GENDER_CODE" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="GENDER_DESC" Type="System.String" DbType="VarChar(7)" CanBeNull="true" />
+      <Column Name="EMP_TYPE" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="EMP_TYPE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="STAFF_CATEG" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="STAFF_CATEG_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BIRTH_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="HIRE_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="SERVICE_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="TERMINATION_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="DEPT_CODE_OLD" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="DEPT_CODE_OLD_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS_HIRE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="STATUS_HIRE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="POINT_OF_HIRE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="POINT_OF_HIRE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ACCOUNT_DOMAIN" Type="System.String" DbType="VarChar(11)" CanBeNull="true" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="AGE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BLOOD_TYPE" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="RELIGION_DESC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="RES_ADDRESS_1" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="RES_ADDRESS_2" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="RES_ADDRESS_3" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="RES_ZIPCODE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SUPERIOR_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="POSITION_START_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="GOLONGAN" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="GOL_COMPTCY_LEVEL" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="GOL_START_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="HOME_PHONE_NO" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="HOME_MOBILE_NO" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="RANKS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="RANK_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RANK_START_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="DEPT_CODE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="DEPT_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DIV_CODE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="DIV_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address_LotusNotes" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email_Internet" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ACTIVE_STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DEPT_CODE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DIV_CODE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DEPT_CODE_PERS" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="DEPT_CODE_PERS_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GENDER" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="NAME_INITCAP" Type="System.String" DbType="VarChar(43)" CanBeNull="true" />
+      <Column Name="RELIGION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MODIFIED_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RANKS_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RANKS_START_DATE" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="SECONDARY_POSITION_ID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="LAST_EDUCATION" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="BIRTH_PLACE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="BIRTH_PLACE_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GROUP_GOLONGAN" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="MARITAL_STATUS" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="MARITAL_STATUS_DESC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="JURUSAN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UNIVERSITAS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LAST_EDU_TIMESTAMP_ELLIPSE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DEPENDANTS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.View_GP_ID" Member="View_GP_IDs">
+    <Type Name="View_GP_ID">
+      <Column Name="GP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NRP" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(91)" CanBeNull="true" />
+      <Column Name="Deskripsi_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DISTRIK" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(43)" CanBeNull="true" />
+      <Column Name="GENDER" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_menucross_gpid" Member="vw_menucross_gpids">
+    <Type Name="vw_menucross_gpid">
+      <Column Name="pid" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="primer" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="id_" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="menu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="menu_link" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="link" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="urutan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="deskripsi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="gp_id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ischeck" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="a_" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="d_" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="e_" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="r_" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ur.UR_001" Member="UR_001s">
+    <Type Name="UR_001">
+      <Column Name="CN" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DISTRICT" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="EGI" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="EQ_Class" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="LAST_HM" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="LAST_FUEL_DATE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="WR" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="WR_NUMBER" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="LAST_WO_DATE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="WO_NUMBER" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="AGING" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MODEL" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="HM" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="STATUS_UNIT_ELLIPS" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="COSTING_FLG" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ACT_FLG" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="STATUS_PID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STATUS_DESC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ur.UR003_PO_PRICE" Member="UR003_PO_PRICEs">
+    <Type Name="UR003_PO_PRICE">
+      <Column Name="PO" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="KODE_ITEM" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DESKRIPSI" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="HARGA" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FREIGHT_CODE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_M_STATUS_UR002" Member="TBL_M_STATUS_UR002s">
+    <Type Name="TBL_M_STATUS_UR002">
+      <Column Name="CODE" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ur.UR_002" Member="UR_002s">
+    <Type Name="UR_002">
+      <Column Name="PID" Type="System.Guid" DbType="UniqueIdentifier" CanBeNull="true" />
+      <Column Name="SITE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="TYPE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="CLASS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="EGI" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="CN" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PROD_YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HM" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="LAST_RUNNING" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IMPORTATION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NO_FAD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FAD_OUTS" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="APPROVED" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AGING" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NO_FAT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FAT_OUTS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LCT" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DELIVERY" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="RECEIVE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ETD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ETA" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="REMARK" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS_UNIT_UR2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROCESS_STATUS" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IS_APPROVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LEASING" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="CREATE_FAT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="APPRV_DESC" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ur.UR_Approval" Member="UR_Approvals">
+    <Type Name="UR_Approval">
+      <Column Name="CN" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="EGI" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="SITE" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="TYPE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="CLASS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="CN_MODEL" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PROD_YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HM" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="LAST_RUNNING" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IMPORTATION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LEASING" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="NO_FAD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FAD_OUTS" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="APPROVED" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NO_FAT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FAT_OUTS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CREATE_FAT" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DELIVERY" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="RECEIVE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ETD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ETA" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="STATUS_UNIT_UR2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROCESS_STATUS" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="IS_APPROVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="APPRV_DESC" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="REMARK" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="app.Menu_Aplikasi" Member="Menu_Aplikasis">
+    <Type Name="Menu_Aplikasi">
+      <Column Name="Primer" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Menu" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Menu_link" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Urutan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Deskripsi" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Style_css" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="Span_class" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_M_SUGGESTION_STATUS" Member="TBL_M_SUGGESTION_STATUS">
+    <Type Name="TBL_M_SUGGESTION_STATUS">
+      <Column Name="SUGGESTION_STATUS" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SUGGESTION_DESC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_M_STATUS_PROCESS_UR5" Member="TBL_M_STATUS_PROCESS_UR5s">
+    <Type Name="TBL_M_STATUS_PROCESS_UR5">
+      <Column Name="CODE_STATUS" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODE_DETAIL" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_M_STATUS_PROGRESS_RECON" Member="TBL_M_STATUS_PROGRESS_RECONs">
+    <Type Name="TBL_M_STATUS_PROGRESS_RECON">
+      <Column Name="PID_STATUS_RECON" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DESCRIPTION" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="ur.UR_005" Member="UR_005s">
+    <Type Name="UR_005">
+      <Column Name="DISTRIK" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="CN" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DECISSION" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="RECON_LOCATION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="START_RECONDITION" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TARGET_FINISH_RECONDITION" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="STATUS_PROGRESS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROG_DESC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS_PROCESS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROCESS_DESC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ACTUAL_FINISH_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PERCENTS" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_EGI_AVALIBALE" Member="VW_EGI_AVALIBALEs">
+    <Type Name="VW_EGI_AVALIBALE">
+      <Column Name="EGI" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="EGI_DESCRIPTION" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EQUIP_CLASS" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_TIPE_BERAT_BESI" Member="TBL_M_TIPE_BERAT_BESIs">
+    <Type Name="TBL_M_TIPE_BERAT_BESI">
+      <Column Name="PID_TRANS" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EGI" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TYPE_DESC" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WEIGHT" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="PRICE_BESI" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CREATE_USER" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_T_LOG_ANYTHINK" Member="TBL_T_LOG_ANYTHINKs">
+    <Type Name="TBL_T_LOG_ANYTHINK">
+      <Column Name="PID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TANGGAL_LOG" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="ACTION" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="UR" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SUB_UR" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="USER_NRP" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="CN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_T_EGI_PLAFON" Member="TBL_T_EGI_PLAFONs">
+    <Type Name="TBL_T_EGI_PLAFON">
+      <Column Name="EGI" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="PLAFON" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_EGI_PLAFON" Member="VW_EGI_PLAFONs">
+    <Type Name="VW_EGI_PLAFON">
+      <Column Name="EGI" Type="System.String" DbType="NVarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="EGI_DESCRIPTION" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PLAFON" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="REMARK" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_M_CUSTOMER" Member="TBL_M_CUSTOMERs">
+    <Type Name="TBL_M_CUSTOMER">
+      <Column Name="CUSTOMER_ID" Type="System.String" DbType="VarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CUS_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CUS_ADDRESS" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="COUNTRY_CODE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PHONE_NUMBER" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CUS_STATUS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EMAIL_ADDR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IS_ACTIVE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_CUSTOMER" Member="VW_CUSTOMERs">
+    <Type Name="VW_CUSTOMER">
+      <Column Name="CUSTOMER_ID" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CUS_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CUS_ADDRESS" Type="System.String" DbType="VarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="COUNTRY_CODE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="COUNTRY_NAME" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="ISO" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="PIC" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PHONE_NUMBER" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="CUS_STATUS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CUS_DESC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="EMAIL_ADDR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IS_ACTIVE" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_R_COUNTRY" Member="TBL_R_COUNTRies">
+    <Type Name="TBL_R_COUNTRY">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ISO" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
+      <Column Name="NAME" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="NICENAME" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ISO3" Type="System.String" DbType="Char(3)" CanBeNull="true" />
+      <Column Name="NUMCODE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PHONECODE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_R_CUSTOMER_STATUS" Member="TBL_R_CUSTOMER_STATUS">
+    <Type Name="TBL_R_CUSTOMER_STATUS">
+      <Column Name="CUS_STATUS" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CUS_DESC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="app.TBL_T_SELECTED_CN" Member="TBL_T_SELECTED_CNs">
+    <Type Name="TBL_T_SELECTED_CN">
+      <Column Name="CN" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_T_UNIT_FAD_LAST_STEP" Member="TBL_T_UNIT_FAD_LAST_STEPs">
+    <Type Name="TBL_T_UNIT_FAD_LAST_STEP">
+      <Column Name="PID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CN" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DSTRCT_DISPOSAL" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="SALES_STATUS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CUSTOMER_ID" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="PJB_NUMBER" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="SELLING_PRICE" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="MEDIATOR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="INVOICE_NUMBER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IVOICE_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AMOUNT_INOVICE" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="STATUS_INVOICE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FAKTUR_NUMBER" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="STATUS_FAKTUR" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FAKTUR_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AMOUNT_FAKTUR" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_BY" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ur.UR_007" Member="UR_007s">
+    <Type Name="UR_007">
+      <Column Name="CN" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="DISTRIK" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EGI" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="MODEL" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DECISSION" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(12) NOT NULL" CanBeNull="false" />
+      <Column Name="AMOUNT_FAKTUR" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="AMOUNT_INOVICE" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="CUSTOMER_ID" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="CUS_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FAKTUR_DATE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="IVOICE_DATE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PJB_NUMBER" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FAKTUR_NUMBER" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="INVOICE_NUMBER" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MEDIATOR" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SELLING_PRICE" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="SALES_STATUS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS_FAKTUR" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="STATUS_INVOICE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="staging.STAGING_DATA_COST" Member="STAGING_DATA_COSTs">
+    <Type Name="STAGING_DATA_COST">
+      <Column Name="CN" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PO_LAUT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PO_DARAT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PO_DARAT_PRICE" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="PO_LAUT_PRICE" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="staging.STAGING_TBL_T_FAD" Member="STAGING_TBL_T_FADs">
+    <Type Name="STAGING_TBL_T_FAD">
+      <Column Name="CN" Type="System.String" DbType="VarChar(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DSITRIK" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TYPE" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="EGI" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="CLASS" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="PROD_YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HM" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="LAST_RUNNING" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IMPORTATION" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="FAD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FAD_OUTS" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="APPROVED" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="AGING" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FAT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FAT_OUTS" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DELIVERY" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="RECEIVE" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="PO_NUMBER" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ETD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ETA" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="REMARK" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LCT" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="staging.STAGING_TBL_T_MONITORING_RECOND" Member="STAGING_TBL_T_MONITORING_RECONDs">
+    <Type Name="STAGING_TBL_T_MONITORING_RECOND">
+      <Column Name="CN" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DISTRIK" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RECOND_LOCATION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TARGET_FINISH" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="STATUS_UNIT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STATUS_PROCESS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTUAL_FINISH_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PERSEN" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="app.VW_QUOTATIONS" Member="VW_QUOTATIONs">
+    <Type Name="VW_QUOTATION">
+      <Column Name="CN" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MODEL" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="HM" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="PROD_YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UNIT_PRICE" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AMOUNT" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="LOCATION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ur.UR_003" Member="UR_003s">
+    <Type Name="UR_003">
+      <Column Name="CN" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SITE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PO_DARAT" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PO_LAUT" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PO_DARAT_PRICE" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="PO_LAUT_PRICE" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="ABR_PATH_FILE" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PRICE_DARAT_INPUT" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="PRICE_LAUT_INPUT" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="TOTAL_ESTIMATE_PLAN_REPAIR" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="PO_DARAT_DESC" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PO_LAUT_DESC" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="IS_APPROVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HIDE_CANCEL" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="app.VW_PIC_DEP_HEAD" Member="VW_PIC_DEP_HEADs">
+    <Type Name="VW_PIC_DEP_HEAD">
+      <Column Name="NAMA" Type="System.String" DbType="VarChar(44)" CanBeNull="true" />
+      <Column Name="JABATAN" Type="System.String" DbType="VarChar(41)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ur.UR_004" Member="UR_004s">
+    <Type Name="UR_004">
+      <Column Name="CN" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DISTRIK" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="EGI" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PROD_YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BOOK_VALUE" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="MINIMUM_PRICE" Type="System.Decimal" DbType="Decimal(32,4)" CanBeNull="true" />
+      <Column Name="MAXIMUM_PRICE" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AVERAGE_PRICE" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="ABR" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="ABR_PATH_FILE" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="STATUS_UNIT_UR2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROCESS_STATUS" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="SUGGEST" Type="System.String" DbType="VarChar(14) NOT NULL" CanBeNull="false" />
+      <Column Name="SUGGESTION_PRICE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="SS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TW" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="app.VW_SELECTED_CN" Member="VW_SELECTED_CNs">
+    <Type Name="VW_SELECTED_CN">
+      <Column Name="CN" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IS_CHECK" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DATE_SELECTED" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="EQ_CLASS" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="TYPE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_T_UNIT_FAD" Member="TBL_T_UNIT_FADs">
+    <Type Name="TBL_T_UNIT_FAD">
+      <Column Name="CN" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DSTRCT_DISPOSAL" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ETD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ETA" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="REMARK" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IS_APPROVE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CRETAE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATE_BY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="UPDATE_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UPDATE_NY" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="STATUS_UNIT_UR2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PO_DARAT" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PO_LAUT" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PO_DARAT_PRICE" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="PO_LAUT_PRICE" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="ABR_PATH_FILE" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PRICE_DARAT_INPUT" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="PRICE_LAUT_INPUT" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="TOTAL_ESTIMATE_PLAN_REPAIR" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="PO_DARAT_DESC" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PO_LAUT_DESC" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="PID_TRANS_WEIGHT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SUGGESTION_STATUS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RECON_LOCATION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="START_RECONDITION" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TARGET_FINISH_RECONDITION" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="STATUS_PROGRESS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STATUS_PROCESS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACTUAL_FINISH_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PERCENTS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PRICE_SALE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TOTAL_COST_ELLIPSE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IS_SELED_FOQUOT" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="ur.UR_006" Member="UR_006s">
+    <Type Name="UR_006">
+      <Column Name="CN" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="DISTRIK" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="EGI" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="ABR" Type="System.Decimal" DbType="Decimal(15,3)" CanBeNull="true" />
+      <Column Name="DECISSION" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="RECON_LOCATION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="START_RECONDITION" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TARGET_FINISH_RECONDITION" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="STATUS_PROGRESS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROG_DESC" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS_PROCESS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PROCESS_DESC" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ACTUAL_FINISH_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="PERCENTS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BOOK_VALUE" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTAL_COST" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="PRICE_SALE" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="SLC" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="staging.sm_used_equipment_last_transations" Member="sm_used_equipment_last_transations">
+    <Type Name="sm_used_equipment_last_transation">
+      <Column Name="dstrct_code" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="equip_no" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="serial_number" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="equip_grp_id" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="model" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="equip_class" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="equip_status" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="costing_flg" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="last_date_hm" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="hm" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="last_date_fuel" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="last_posted_dt_wr" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="last_posted_wr_no" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="last_close_dt_wo" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="last_wo_no" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="app.sp_update_mapping_menu" Method="sp_update_mapping_menu">
+    <Parameter Name="sIsCheck" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sGP_ID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sPrimer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sIsAdd" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="sIsDelete" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="sIsEdit" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="sIsRead" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="detail.cufn_get_ur2a_detail1" Method="cufn_get_ur2a_detail1" IsComposable="true">
+    <Parameter Name="CN" Parameter="cN" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="DSTRCT_CODE" Parameter="dSTRCT_CODE" Type="System.String" DbType="VarChar(4)" />
+    <ElementType Name="cufn_get_ur2a_detail1Result">
+      <Column Name="DISTRIK" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="CN" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DESKRIPSI" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="PROD_YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HOUR_METER" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="EXPIRED_LEASING" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="NILAI_NUKU_FISKAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NET_BOOK_VALUE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STATUS_IMPORT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NO_FAD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NO_FAT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="detail.cufn_get_ur2a_detail3" Method="cufn_get_ur2a_detail3" IsComposable="true">
+    <Parameter Name="CN" Parameter="cN" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="cufn_get_ur2a_detail3Result">
+      <Column Name="PAP_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="component" Type="System.String" DbType="VarChar(112)" CanBeNull="true" />
+      <Column Name="oilbrand" Type="System.String" DbType="VarChar(36)" CanBeNull="true" />
+      <Column Name="oiltype" Type="System.String" DbType="VarChar(88)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="detail.cufn_get_ur4_detail2" Method="cufn_get_ur4_detail2" IsComposable="true">
+    <Parameter Name="EGI" Parameter="eGI" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="TAHUN" Parameter="tAHUN" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="MINIMUM" Parameter="mINIMUM" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <ElementType Name="cufn_get_ur4_detail2Result">
+      <Column Name="SALE_METHOD" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="MAXIMUM" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="AVERAGE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MINIMUM" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="detail.cufn_get_ur7_detail" Method="cufn_get_ur7_detail" IsComposable="true">
+    <Parameter Name="CN" Parameter="cN" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="EGI" Parameter="eGI" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="cufn_get_ur7_detailResult">
+      <Column Name="MINIMUM_PRICE" Type="System.Decimal" DbType="Decimal(32,4) NOT NULL" CanBeNull="false" />
+      <Column Name="MAXIMUM_PRICE" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="AVERAGE_PRICE" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="app.cusp_approve_cn_fad" Method="cusp_approve_cn_fad">
+    <Parameter Name="CN" Parameter="cN" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="DSTRCT_CODE" Parameter="dSTRCT_CODE" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="USER" Parameter="uSER" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="APPROV_STATUS" Parameter="aPPROV_STATUS" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="detail.cufn_get_ur4_detail" Method="cufn_get_ur4_detail" IsComposable="true">
+    <Parameter Name="CN" Parameter="cN" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="ABR" Parameter="aBR" Type="System.Decimal" DbType="Decimal(15,2)" />
+    <ElementType Name="cufn_get_ur4_detailResult">
+      <Column Name="SITE" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="CN" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="DESKRIPSI" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PROD_YEAR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HOUR_METER" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="EXPIRED_LEASING" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="NILAI_BUKUFISKAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NET_BOOK_VALUE" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="STATUS_IMPORT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NO_FAD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="NO_FAT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="COST_MOBILISASI" Type="System.Decimal" DbType="Decimal(16,3) NOT NULL" CanBeNull="false" />
+      <Column Name="ABR" Type="System.Decimal" DbType="Decimal(15,2)" CanBeNull="true" />
+      <Column Name="COST_REPAIR_ACTUAL" Type="System.Decimal" DbType="Decimal(15,2) NOT NULL" CanBeNull="false" />
+      <Column Name="TOTAL_COST" Type="System.Decimal" DbType="Decimal(17,3)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="app.cusp_back_to_recond" Method="cusp_back_to_recond">
+    <Parameter Name="CN" Parameter="cN" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="DSTRCT_CODE" Parameter="dSTRCT_CODE" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="USER_NRP" Parameter="uSER_NRP" Type="System.String" DbType="VarChar(12)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="app.cusp_update_egi_plafon" Method="cusp_update_egi_plafon">
+    <Parameter Name="EGI" Parameter="eGI" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="PLAFON" Parameter="pLAFON" Type="System.Decimal" DbType="Decimal(15,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="app.cusp_update_weigh_besi" Method="cusp_update_weigh_besi">
+    <Parameter Name="DESC" Parameter="dESC" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="WEIGHT" Parameter="wEIGHT" Type="System.Decimal" DbType="Decimal(15,2)" />
+    <Parameter Name="PRICE_BESI" Parameter="pRICE_BESI" Type="System.Decimal" DbType="Decimal(15,2)" />
+    <Parameter Name="USER" Parameter="uSER" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="PID" Parameter="pID" Type="System.String" DbType="VarChar(40)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="tool.SearchDataUR001" Method="SearchDataUR001" IsComposable="true">
+    <Parameter Name="date_input" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="SearchDataUR001Result">
+      <Column Name="CN" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DISTRICT" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="SN" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="EGI" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="EQ_Class" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="LAST_HM" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="LAST_FUEL_DATE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="WR" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="WR_NUMBER" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="LAST_WO_DATE" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="WO_NUMBER" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="AGING" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MODEL" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="HM" Type="System.Decimal" DbType="Decimal(11,2)" CanBeNull="true" />
+      <Column Name="STATUS_UNIT_ELLIPS" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="COSTING_FLG" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="ACT_FLG" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="STATUS_PID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="STATUS_DESC" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.cusp_save_last_process_fad" Method="cusp_save_last_process_fad">
+    <Parameter Name="CN" Parameter="cN" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="DSTRCT_DISPOSAL" Parameter="dSTRCT_DISPOSAL" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="SALES_STATUS" Parameter="sALES_STATUS" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="CUSTOMER_ID" Parameter="cUSTOMER_ID" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="PJB_NUMBER" Parameter="pJB_NUMBER" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="SELLING_PRICE" Parameter="sELLING_PRICE" Type="System.Decimal" DbType="Decimal(15,2)" />
+    <Parameter Name="MEDIATOR" Parameter="mEDIATOR" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="INVOICE_NUMBER" Parameter="iNVOICE_NUMBER" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IVOICE_DATE" Parameter="iVOICE_DATE" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="AMOUNT_INOVICE" Parameter="aMOUNT_INOVICE" Type="System.Decimal" DbType="Decimal(15,2)" />
+    <Parameter Name="STATUS_INVOICE" Parameter="sTATUS_INVOICE" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="FAKTUR_NUMBER" Parameter="fAKTUR_NUMBER" Type="System.String" DbType="VarChar(30)" />
+    <Parameter Name="STATUS_FAKTUR" Parameter="sTATUS_FAKTUR" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="FAKTUR_DATE" Parameter="fAKTUR_DATE" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="AMOUNT_FAKTUR" Parameter="aMOUNT_FAKTUR" Type="System.Decimal" DbType="Decimal(15,2)" />
+    <Parameter Name="USER" Parameter="uSER" Type="System.String" DbType="VarChar(12)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="staging.cusp_update_input_datacost" Method="cusp_update_input_datacost">
+    <Parameter Name="NRP_USER" Parameter="nRP_USER" Type="System.String" DbType="VarChar(12)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="staging.cusp_update_input_monitoring_recond" Method="cusp_update_input_monitoring_recond">
+    <Parameter Name="v_NRP" Type="System.String" DbType="VarChar(12)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="staging.insert_update_unit_terdapat_fad" Method="insert_update_unit_terdapat_fad">
+    <Parameter Name="USER_NRP" Parameter="uSER_NRP" Type="System.String" DbType="VarChar(12)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="app.cusp_fad_pertama" Method="cusp_fad_pertama">
+    <Parameter Name="ETD" Parameter="eTD" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ETA" Parameter="eTA" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="STATUS" Parameter="sTATUS" Type="System.Int32" DbType="Int" />
+    <Parameter Name="USR" Parameter="uSR" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="REMARK" Parameter="rEMARK" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="CN" Parameter="cN" Type="System.String" DbType="VarChar(12)" />
+    <Parameter Name="DSTRCT" Parameter="dSTRCT" Type="System.String" DbType="VarChar(4)" />
+    <Parameter Name="USER" Parameter="uSER" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="app.cusp_ur4_clear5_7" Method="cusp_ur4_clear5_7">
+    <Parameter Name="CN" Parameter="cN" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="app.cusp_set_selected_cn" Method="cusp_set_selected_cn">
+    <Parameter Name="TYE" Parameter="tYE" Type="System.String" DbType="VarChar(5)" />
+    <Parameter Name="act" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="detail.cufn_get_ur2a_detail2" Method="cufn_get_ur2a_detail2" IsComposable="true">
+    <Parameter Name="CN" Parameter="cN" Type="System.String" DbType="VarChar(20)" />
+    <ElementType Name="cufn_get_ur2a_detail2Result">
+      <Column Name="equip_no" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="dstrct_ovh" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="location" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="compid" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="component" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="posisi" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ovhke" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="last_ovh_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="last_ovh_hm" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="last_ovh_product" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="last_ovh_sncomp" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="current_hm_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="current_hm" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ori_lifetime" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ovh_lifetime" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="lifetime_comp" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="aktif_unit" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="fleet_status" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="fleet_description" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

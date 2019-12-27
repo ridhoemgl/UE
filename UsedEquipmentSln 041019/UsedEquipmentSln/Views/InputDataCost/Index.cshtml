@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "Integrated System Used Equipment";
+    ViewBag.dashboard = "Input Data Cost";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="txt_user_nrp" value="@ViewBag.NRP" />
+<input type="hidden" id="txt_profile" value="@ViewBag.profile" />
+
+<style>
+    .k-window div.k-window-content{
+        overflow : hidden;
+    }
+</style>
+<div id="wnd_upload_data" style="display:none">
+    <div class="form-group row">
+        <div class="col-md-11">
+            <div class="panel panel-default ">
+                <div class="panel-body clearfix">
+                    <h6>Masukkan File Excel (.xlsx)</h6>
+                    <input type="file" id="fl_upload_exel" name="fl_SoalPG" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel panel-flat" style="margin-top:10px">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div id="gridInputDataCost"></div>
+            </div>
+        </div><br />
+        <div class="col-md-12" style="height:0px;">
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12" id="wnd_input_data_cost" style="display:none">
+    <input type="hidden" id="flag_upload" />
+    <div class="panel panel-info">
+        <div class="panel-body clearfix" style="margin-top:0">
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">CN:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_cn" style="width: 100%; height:50%; background-color: #ececec" class="form-control" disabled />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px;">SN:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_sn" style="width: 100%; height:50%; background-color: #ececec" class="form-control" disabled />
+                </div>
+            </div><br>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">PO Price Darat:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_po_price_darat" style="width: 100%; height:50%; background-color: #ececec" class="form-control" placeholder="Price Darat" disabled />
+                    <input type="text" id="txt_po_price_darat_desc" style="width: 100%; height:50%; background-color: #ececec; margin-top:5px" class="form-control" placeholder="PO Darat" disabled />
+                    @*<input type="text" id="txt_po_price_darat_desc_2" style="width: 100%; height:50%; background-color: #ececec; margin-top:5px" class="form-control" placeholder="PO Darat Desc" disabled />*@
+                    <br>
+                    <textarea id="ta_po_price_darat_desc" rows="7" style="width:188px; height:20%; font-size:13px;" placeholder="PO Darat Desc" disabled></textarea>
+                    <button class="btn btn-mdb-color btn-rounded btn-sm my-0 ml-sm-2 waves-effect waves-light" type="button" id="btn_price_darat" onclick="findPrice(1)" style="background:#00bcd4; color:white; margin-top: 5px">Search</button>
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px;">PO Price Laut:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_po_price_laut" style="width: 100%; height:50%; background-color: #ececec" class="form-control" placeholder="Price Laut" disabled />
+                    <input type="text" id="txt_po_price_laut_desc" style="width: 100%; height:50%; background-color: #ececec; margin-top:5px" class="form-control" placeholder="PO Laut" disabled />
+                    <br>
+                    <textarea id="ta_po_price_laut_desc" rows="7" style="width:188px; height:20%; font-size:13px;" placeholder="PO Laut Desc" disabled></textarea>
+                    @*<input type="text" id="txt_po_price_laut_desc_2" style="width: 100%; height:50%; background-color: #ececec; margin-top:5px" class="form-control" placeholder="PO Laut Desc" disabled />*@
+                    <button class="btn btn-mdb-color btn-rounded btn-sm my-0 ml-sm-2 waves-effect waves-light" type="button" id="btn_price_laut" onclick="findPrice(2)" style="background:#00bcd4; color:white; margin-top: 5px">Search</button>
+                </div>
+            </div><br>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px; margin-top:20px">Price/Unit Darat:</label>
+                <div class="col-md-3">
+                    <input type="text" maxlength="11" id="txt_price_unit_darat" maxlength="13" class="k-textbox" style="width: 100%; height:50%; margin-top:20px" />
+                    @*<input type="number" id="txt_test" style="width: 100%; height:50%; margin-top:20px" class="form-control" />*@
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px; margin-top:20px">Price/Unit Laut:</label>
+                <div class="col-md-3">
+                    <input type="text" maxlength="11" id="txt_price_unit_laut" maxlength="13" style="width: 100%; height:50%; margin-top:20px" class="k-textbox" />
+                </div>
+            </div><br>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;"></label>
+                <div class="col-md-12">
+                    <input type="text" id="txt_total_est_plan_repair" placeholder="Total Est Plan Repair" style="width: 538px; height:12px; margin-left:100px; margin-left: 100px; text-align: center; font-weight: bold; font-size: large;" class="form-control" />
+                </div><div class="col-md-4"></div>
+                @*<div class="col-md-3">
+                    <label class="control-label col-md-12 flag_abr" style="width:180px;" id="file_abr_desc">ABR File (PDF)</label>
+                    <input type="file" id="txt_abr_file" accept=".pdf" />
+                </div>*@
+            </div><br><br>
+            <div class="form-group">
+                
+                <div class="col-md-12" style="display:none" id="div_upload">
+                    <br>
+                    <label class="control-label col-md-12 flag_abr" style="width:180px;" id="file_abr_remark">ABR File (.xlsx)</label>
+                    <br />
+                    <label class="control-label col-md-12 flag_abr" style="width:180px;" id="file_abr_desc" hidden>ABR File (.xlsx)</label>
+                    <input type="file" id="txt_abr_file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                </div>
+            </div>
+            <br />
+            <div style="text-align:left; padding-left:10px">
+                <button id="btn_save" class="btn btn-primary save" onclick="save()">Save <span class="glyphicon glyphicon-save"></span></button>
+                <button id="btn_cancel" class="btn btn-secondary cancel" onclick="cancel()"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                @*<button id="btn_check" class="btn btn-danger" onclick="btnCheck()"><span class="glyphicon glyphicon-floppy-remove"></span> Check</button>*@
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="col-md-12" id="wnd_POPrice" style="display:none">
+    <div id="grid_po_price"></div>
+</div>
+<script id="aplut" type="text/x-kendo-template">
+    <a class="k-button" href="\#" onclick="return upload_wnd()"><span class="k-icon k-i-plus k-flip-h"></span> Upload Excel</a>
+</script>
+<script id="dowload_ex" type="text/x-kendo-template">
+    <a class="k-button" href="\#" onclick="return download_excel()"><span class="k-icon k-i-plus k-flip-h"></span> Download Template Excel</a>
+</script>
+<script type="text/javascript" src="@ViewBag.pathParent/Js/InputDataCost.js"></script>
+

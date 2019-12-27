@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment";
+    ViewBag.dashboard = "Master EGI Plafon";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="txt_nrp" value="@ViewBag.NRP" />
+
+<div class="panel panel-flat" style="margin-top:10px">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div id="grid_plafon">
+
+                </div>
+            </div>
+        </div><br />
+    </div>
+</div>
+<script type="text/javascript" src="@ViewBag.pathParent/Js/EgiPlafon.js"></script>

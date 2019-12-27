@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Selected CN";
+    ViewBag.dashboard = "Master Customer";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="txt_nrp" value="@ViewBag.NRP" />
+
+<div class="panel panel-flat" style="margin-top:10px">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-xs-2">
+                <div class="input-group">
+                    <input type="hidden" name="search_param" value="all" id="search_param">
+                    <input type="text" maxlength="2" id="txt_search" class="form-control" name="x" placeholder="search type..">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" id="BTN_SEARCHS" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <button type="button" id="btn_check" class="btn btn-sm btn-success"><i class="icon-check"></i> Check Type</button>
+            </div>
+            <div class="col-md-1">
+                <button type="button" id="btn_uncheck" class="btn btn-sm btn-danger"><i class="icon-remove"></i> UnChek Type</button>
+            </div>
+            <div class="col-md-12"></div><br /><br />
+            <div class="col-md-7">
+                <div id="grid_selec_CN">
+
+                </div>
+            </div>
+            
+        </div><br />
+    </div>
+</div>
+
+<script type="text/javascript" src="@ViewBag.pathParent/Js/SelectedCN.js"></script>

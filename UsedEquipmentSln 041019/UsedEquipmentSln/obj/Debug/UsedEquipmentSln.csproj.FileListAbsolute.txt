@@ -1,0 +1,203 @@
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\csc.exe
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.Collections.Immutable.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.Reflection.Metadata.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\vbc.exe
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe.config
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\UsedEquipmentSln.dll.config
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\UsedEquipmentSln.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\UsedEquipmentSln.pdb
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\Kendo.DynamicLinq.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\System.Linq.Dynamic.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.pdb
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\csc.exe.config
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\csc.rsp
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\csi.exe
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\csi.rsp
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.AppContext.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\vbc.exe.config
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\vbc.rsp
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.csprojResolveAssemblyReference.cache
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\UsedEquipmentSln.dll.config
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\UsedEquipmentSln.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\UsedEquipmentSln.pdb
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\csc.exe
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\csc.exe.config
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\csc.rsp
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\csi.exe
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\csi.rsp
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.AppContext.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.Collections.Immutable.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\System.Reflection.Metadata.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\vbc.exe
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\vbc.exe.config
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\vbc.rsp
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe.config
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.dll
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.pdb
+D:\DATA\New folder\UsedEquipmentSln\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.csprojResolveAssemblyReference.cache
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.dll.config
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.pdb
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.exe
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.exe.config
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.rsp
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csi.exe
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csi.rsp
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.AppContext.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Collections.Immutable.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Reflection.Metadata.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.exe
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.exe.config
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.rsp
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe.config
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\Kendo.DynamicLinq.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\bin\System.Linq.Dynamic.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.dll
+D:\DATA\PAMA\Web\UsedEquipment\UsedEquipmentSln 041019\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.pdb
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.dll.config
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.pdb
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.exe
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.exe.config
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.rsp
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csi.exe
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csi.rsp
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.AppContext.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Collections.Immutable.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Reflection.Metadata.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.exe
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.exe.config
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.rsp
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe.config
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\LdapAuthentication.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.csprojResolveAssemblyReference.cache
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.dll
+D:\DATA\Project\2019\05 SM\UsedEquipmentSln 041019\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.pdb
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.dll.config
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.pdb
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.exe
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.exe.config
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.rsp
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csi.exe
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csi.rsp
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.AppContext.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Collections.Immutable.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Reflection.Metadata.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.exe
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.exe.config
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.rsp
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe.config
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\EPPlus.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\OfficeOpenXml.Extends.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\bin\EPPlus.xml
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.dll
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.pdb
+D:\DATA\Project\2019\05 SM\backup\UsedEquipmentSln 041019\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.csprojResolveAssemblyReference.cache
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.dll.config
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\UsedEquipmentSln.pdb
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.exe
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.exe.config
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csc.rsp
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csi.exe
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\csi.rsp
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.AppContext.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Collections.Immutable.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\System.Reflection.Metadata.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.exe
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.exe.config
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\vbc.rsp
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\roslyn\VBCSCompiler.exe.config
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\EPPlus.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\OfficeOpenXml.Extends.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\bin\EPPlus.xml
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.csprojResolveAssemblyReference.cache
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.dll
+D:\DATA\RIDHO\SM\UsedEquipmentSln 041019\UsedEquipmentSln\obj\Debug\UsedEquipmentSln.pdb

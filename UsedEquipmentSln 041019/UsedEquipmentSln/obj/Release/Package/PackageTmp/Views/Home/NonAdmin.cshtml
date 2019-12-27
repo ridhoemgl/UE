@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Pixel Dashboard";
+    ViewBag.dashboard = "Home";
+    ViewBag.dashboardSmall = "Dashboard";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+
+<div class="row">
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h6 class="panel-title" style="font-weight:bold">WELCOME @Session["Name"]</h6>
+        </div>
+    </div>
+</div>

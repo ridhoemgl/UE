@@ -1,0 +1,244 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment Dashboard";
+    ViewBag.dashboard = "Home";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="txt_nrp" value="@Session["empId"]" />
+<input type="hidden" id="txt_gp"  value="@Session["gpId"] "/>
+
+<div class="row">
+    <div class="panel panel-flat">
+        <div class="panel-heading">
+            <h6 class="panel-title" style="font-weight:bold">WELCOME @Session["Name"]</h6>
+        </div>
+    </div>
+</div>
+
+@*<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h6 class="panel-title" style="font-weight:bold"><i class="icon-eye position-left"></i>User View</h6>
+                <div class="heading-elements">
+                    <form class="heading-form" action="#">
+                        <div class="form-group" id="heading_date">
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <ul class="list-inline text-center" id="tooltip_user_online">
+                            <li>
+                                <a href="#" class="btn border-teal text-teal btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i class="icon-users"></i></a>
+                                <div class="text-bold"><input type="text" class="text-center" id="userOnline" style="width:100%;background-color:transparent;border:none" readonly /></div>
+                                <div class="text-semibold">User Online</div>
+                            </li>
+                        </ul>
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="content-group" id="new-visitors"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="list-inline text-center"  id="tooltip_user_active">
+                            <li>
+                                <a href="#" class="btn border-warning-400 text-warning-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i class="icon-users4"></i></a>
+                                <div class="text-bold"><input type="text" class="text-center" id="userActive" style="width:100%;background-color:transparent;border:none" readonly /></div>
+                                <div class="text-semibold">User Active</div>
+                            </li>
+                        </ul>
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="content-group" id="new-sessions"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <ul class="list-inline text-center" id="tooltip_login_today">
+                            <li>
+                                <a href="#" class="btn border-indigo-400 text-indigo-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i class="icon-watch2"></i></a>
+                                <div class="text-bold"><input type="text" class="text-center" id="loginToday" style="width:100%;background-color:transparent;border:none" readonly /></div>
+                                <div class="text-semibold">Login Today</div>
+                            </li>
+                        </ul>
+                        <div class="col-lg-10 col-lg-offset-1">
+                            <div class="content-group" id="total-online"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <di v class="col-md-6">
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h6 class="panel-title" style="font-weight:bold"><i class="icon-pie-chart position-left"></i>Approval Percentage Me</h6>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div id="chart_apprvl" style="height:300px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="panel panel-flat">
+            <div class="panel-heading" id="chart_title">
+                <h6 class="panel-title" style="font-weight:bold" id="chart_title"><i class="icon-stats-bars position-left"></i>Approval Percentage Detail</h6>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div id="chart_apprvl_detail" style="height:400px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h6 class="panel-title" style="font-weight:bold"><i class="icon-stats-bars2 position-left"></i>Log By User</h6>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div id="chart_log_user" style="height:600px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" id="chart_action">
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h6 class="panel-title" style="font-weight:bold"><i class="icon-stats-bars4 position-left"></i>Log By Action</h6>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div id="chart_log_action" style="height:600px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" id="chart_action_nrp" style="display:none">
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h6 class="panel-title" style="font-weight:bold" id="title_action_nrp"></h6>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div id="chart_log_action_nrp" style="height:600px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h6 class="panel-title" style="font-weight:bold"><i class="icon-wrench3 position-left"></i>Task Monitoring</h6>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div id="gridTaskMonitoring"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="panel panel-flat">
+            <div class="panel-heading">
+                <h6 class="panel-title" style="font-weight:bold"><i class="icon-stack position-left"></i>Master Log</h6>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="col-md-3">
+                        <input type="text" id="txt_job_id" style="width:100%" />
+                    </div>
+                </div>
+                <br />
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <div id="gridMasterLog"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="wnd_task" style="padding:20px" hidden>
+    <div class="card">
+        <div class="form-group" style="font-size: 12px">
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">Job ID :</div>
+                <div class="col-md-6"><input type="text" id="txt_jobid" class="k-textbox" style="width: 100%" /></div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">DB Server Name :</div>
+                <div class="col-md-6"><input type="text" id="txt_svname" class="k-textbox" style="width: 100%" /></div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">Database Name :</div>
+                <div class="col-md-6"><input type="text" id="txt_dbname" class="k-textbox" style="width: 100%" /></div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">Script Location :</div>
+                <div class="col-md-6"><input type="text" id="txt_script_location" class="k-textbox" style="width: 100%" /></div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">Interval Type (R/H/M) :</div>
+                <div class="col-md-6"><input type="text" id="txt_type" maxlength="1" class="k-textbox" style="width: 100%" /></div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">Duration :</div>
+                <div class="col-md-6"><input type="number" min="0" id="txt_duration" class="k-textbox" style="width: 100%" /></div>
+            </div>
+            <div class="col-md-12">
+                <br />
+                <div class="col-md-4">Active Status :</div>
+                <div class="col-md-4">
+                    <input type="checkbox" id="chk_task" />
+                </div>
+            </div>
+            
+            <div class="clearfix"></div>
+            <br /><br />
+            <div class="col-md-11">
+                <center>
+                    <button type="button" id="btnSaveTask" class="btn btn-round btn-success" style="width: 100%" onclick="saveTask()">SAVE</button>
+                </center>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script id="tmplt_job_status" type="text/x-kendo-tmpl">
+    <div id="job_status_color#=job_id#"></div>
+</script>
+<script id="tmplt_btn_reset" type="text/x-kendo-tmpl">
+    <a href="javascript:void(0)"><span id="btn_reset#=job_id#" class="label label-primary" onclick="Reset('#=job_id#')" style="font-weight:bold"><i class="icon-reset"></i></span></a>
+</script>*@
+
+<script type="text/javascript" src="@ViewBag.pathParent/Js/Dashboard.js"></script>

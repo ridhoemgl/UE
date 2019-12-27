@@ -1,0 +1,82 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment";
+    ViewBag.dashboard = "Unit Tidak Terpakai";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="pid" value="@ViewData["sPID"]" />
+
+<div>
+    <form class="form-inline mr-auto">
+        <input id="txt_hm" maxlength="8" type="text" placeholder="Search last HM" aria-label="Search" style="width:170px; border-color:#00bcd4">
+        <button class="btn btn-mdb-color btn-rounded btn-sm my-0 ml-sm-2 waves-effect waves-light" type="button" id="btn_load" onclick="findData()" style="background:#00bcd4; color:white">Search</button>
+        <a id="clear" style="color:#00bcd4" onclick="clearSearch()">clear</a>
+    </form>
+</div>
+
+<div class="panel panel-flat" style="margin-top:10px">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div id="grid"></div>
+            </div>
+        </div><br />
+        <div class="col-md-12" style="height:30px;">
+
+        </div><br>
+        <div class="form-group">
+            <label class="control-label col-md-12" style="width:250px;"><strong>Summary Equipment</strong></label>
+        </div><br>
+        <div class="form-group">
+            <div class="col-md-12">
+                <div id="gridSummary"></div>
+            </div>
+        </div><br />
+    </div>
+</div>
+<div class="col-md-12" id="wnd_used_equip" style="display:none">
+    <div class="panel panel-info">
+        <div class="panel-heading" style="font-size:15px; text-align:left; font-family:Helvetica;">Unit Tak Terpakai</div>
+        <div class="panel-body clearfix">
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">District:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_district" style="width: 100%; height:50%; background-color: #ececec" class="form-control"  disabled/>
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px;">CN:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_cn" style="width: 100%; height:50%; background-color: #ececec" class="form-control" disabled/>
+                </div>
+            </div><br>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">EGI:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_egi" style="width: 100%; height:50%; background-color: #ececec" class="form-control" disabled/>
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px;">Status:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_status_ur1" style="width: 100%; height:50%" class="form-control" />
+                </div>
+            </div>
+
+            <div class="col-md-12" style="height:30px;">
+
+            </div>
+            <div style="text-align:left; padding-left:30px">
+                <button id="btn_save" class="btn btn-primary save" onclick="save()">Save <span class="glyphicon glyphicon-save"></span></button>
+                <button id="btn_cancel" class="btn btn-secondary cancel" onclick="cancel()"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                <button id="btn_clear_stats" class="btn btn-danger clear_stats"><span class="glyphicon glyphicon-remove"></span> Clear Status</button>
+            </div><br />
+        </div>
+    </div>
+</div>
+<script id="export_excel" type="text/x-kendo-template">
+    <a class="k-button" href="@ViewBag.pathParent/UnusedEquipment/ExportExcelUnUsed"><i class="icon-cloud-download"></i> Export Excel</a>
+</script>
+<script type="text/javascript" src="@ViewBag.pathParent/Js/UnusedEquipment.js"></script>
+

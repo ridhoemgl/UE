@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment";
+    ViewBag.dashboard = "Master Customer";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="txt_nrp" value="@ViewBag.NRP" />
+
+<div class="panel panel-flat" style="margin-top:10px">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div id="grid_customer">
+
+                </div>
+            </div>
+        </div><br />
+    </div>
+</div>
+<div class="col-md-12" id="wnd_frm_customer" style="display:none">
+    <div id="loginbox">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">Master Customer</div>
+            </div>
+            <div style="padding-top:10px" class="panel-body">
+                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                <input type="hidden" id="txt_pid_customer" readonly />
+                <form id="loginform" class="form-horizontal" role="form">
+
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon 6-user"></i></span>
+                        <input id="txt_cus_name" type="text" class="form-control" name="txt_cus_name" maxlength="40" value="" placeholder="Input Customer Name">
+                    </div>
+
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <textarea id="txt_cus_address" class="form-control" placeholder="Input Customer Address" rows="4"></textarea>
+                    </div>
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                        <input id="txt_phone_number" maxlength="15" type="text" class="form-control" name="txt_phone_number" value="" placeholder="Input phone number">
+                    </div>
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-send"></i></span>
+                        <input id="txt_EMAIL_ADDR" type="text" class="form-control" name="txt_EMAIL_ADDR" value="d@gmail.com" placeholder="Input email address">
+                    </div>
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="txt_pic" type="text" class="form-control" name="txt_pic" value="" placeholder="Input PIC">
+                    </div>
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <input id="drp_country" type="text" name="drp_country">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input id="drp_status" type="text" name="drp_country">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="checkbox">
+                            <label>
+                                <input id="cbx_is_active" type="checkbox" name="remember" checked> Active
+                            </label>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:10px" class="form-group">
+                        <!-- Button -->
+                        <div class="col-sm-12 controls">
+                            <a id="btn-sbmit-insert" href="#" class="btn btn-success btn-sm">Submit  </a>
+                            <a id="btn-sbmit-update" href="#" class="btn btn-primary btn-sm" style="display:none">Update  </a>
+                            <a id="btn-cancel" href="#" class="btn btn-warning btn-sm">Cancel  </a>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script id="tbh_n_custmr" type="text/x-kendo-template">
+    <a class="k-button" href="\#" onclick="return add_new_customer()"><span class="k-icon k-i-plus k-flip-h"></span>Tambah Customer</a>
+</script>
+<script type="text/javascript" src="@ViewBag.pathParent/Js/MasterCustomer.js"></script>

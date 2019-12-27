@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment";
+    ViewBag.dashboard = "Master Weight Iron";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+<input type="hidden" id="txt_cn" disabled />
+<input type="hidden" id="session_nrp" value="@ViewBag.NRP" />
+
+<div class="panel panel-flat" style="margin-top:10px">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div id="grid_besi">
+
+                </div>
+            </div>
+        </div><br />
+        <div class="col-md-12" style="height:0px;">
+        </div>
+    </div>
+</div>
+<div class="col-md-12" id="wnd_egi_list" style="display:none">
+    <div id="grid_egi">
+
+    </div>
+</div>
+<div class="col-md-12" id="wnd_add_new" style="display:none">
+    <form class="form-inline">
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="inputPassword2" class="sr-only">EGI</label>
+            <input type="text" id="txt_egi_" class="k-textbox" placeholder="Choose EGI here -->" disabled>
+        </div>
+        <button id="btn_bowse" type="button" class="btn btn-primary mb-2 btn-sm">browse</button>
+    </form>
+    <br />
+    <div class="form-group" style="margin-left:10px">
+        <label for="txt_type">Type</label>
+        <br />
+        <input type="text" class="k-textbox" maxlength="30" id="txt_type" placeholder="input type">
+    </div>
+
+    <div class="form-group" style="margin-left:10px">
+        <label for="txt_weight">Weight</label><br />
+        <input type="text" class="k-textbox" maxlength="8" id="txt_weight" placeholder="input weight">
+    </div>
+    <div class="form-group mx-sm-4 mb-2" style="margin-left:10px">
+        <label for="txt_price">Price</label><br />
+        <input type="text" class="k-textbox" id="txt_price" maxlength="15" placeholder="input price">
+    </div>
+    <div class="form-group mx-sm-4 mb-2" style="margin-left:10px">
+        <button type="button" id="btn_save_egi_besi" class="btn btn-sm btn-success">
+            <span class="glyphicon glyphicon-floppy-saved"></span>&nbsp; Save
+        </button>
+        &nbsp;
+        <button type="button" id="btn_" class="btn btn-sm btn-warning" onclick="$('#wnd_add_new').data('kendoWindow').close();">
+            <span class="glyphicon glyphicon-floppy-remove"></span>&nbsp; Cancel
+        </button>
+    </div>
+    
+</div>
+<script id="add_btn_kendo" type="text/x-kendo-template">
+    <a class="k-button" href="\#" onclick="return grid_add()"><span class="k-icon k-i-plus k-flip-h"></span>Add More Data</a>
+</script>
+<script type="text/javascript" src="@ViewBag.pathParent/Js/MasterWeight.js"></script>

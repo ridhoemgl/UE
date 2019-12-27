@@ -1,0 +1,266 @@
+﻿@{
+    ViewBag.Title = "Quotations";
+    ViewBag.dashboard = "Quotations";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+<link href="~/ContectLayout/css/a4page.css" rel="stylesheet" />
+
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+
+<div class="panel panel-flat">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-4"><label>Title</label></div>
+                <div class="col-md-7">
+                    <input type="text" id="id-title" class="form-control" onchange="handleChange()" style="height:27px;width: 100%" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-4"><label>Document No</label></div>
+                <div class="col-md-7">
+                    <input type="text" id="id-docno" class="form-control" onchange="handleChange()" style="height:27px;width: 100%" />
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-4"><label>To</label></div>
+                <div class="col-md-7">
+                    <div class="col-md-4" style="padding-left:0px">
+                        <input type="text" id="id-gender" class="form-control" style="height:27px;width:100%" />
+                    </div>
+                    <div class="col-md-8" style="padding-left:0px;padding-right:0px">
+                        <input type="text" id="id-to" class="form-control" onchange="handleChange()" style="height:27px;width:100%" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-4"><label>Date</label></div>
+                <div class="col-md-7">
+                    <input type="text" id="id-date" class="form-control" style="height:27px;width: 100%" />
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-4"><label>Condition (no 3)</label></div>
+                <div class="col-md-7">
+                    <textarea cols="100" rows="5" id="id-con3" class="form-control" onchange="handleChange()" style="width: 100%"></textarea>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-4">
+                    <label>Date of Non Refundable Down Payment (no 4)</label>
+                </div>
+
+                <div class="col-md-7">
+                    <input type="text" id="id-con4" class="form-control" style="height:27px;width: 100%" />
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-4"><label>Term (no 9)</label></div>
+                <div class="col-md-7">
+                    <textarea cols="100" rows="5" id="id-con9" class="form-control" onchange="handleChange()" style="width: 100%"></textarea>
+                    @*<input type="text" id="id-con9" class="form-control" onchange="handleChange()" style="height:27px;width: 100%" />*@
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="col-md-4">
+                    <label>Date of Maximum Completion / Delivery (no 5)</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" id="id-con5" class="form-control" style="height:27px;width: 100%" />
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-4"><label>Term (no 10)</label></div>
+                <div class="col-md-7">
+                    <textarea cols="100" rows="5" id="id-con10" class="form-control" style="width: 100%"></textarea>
+                    @*<input type="text" id="id-con9" class="form-control" onchange="handleChange()" style="height:27px;width: 100%" />*@
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="col-md-4">
+                    <label>Term (no 11)</label>
+                </div>
+                <div class="col-md-7">
+                    <textarea cols="100" rows="5" id="id-con11" class="form-control" style="width: 100%"></textarea>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-4"><label>Term (no 12)</label></div>
+                <div class="col-md-7">
+                    <textarea cols="100" rows="4" id="id-con12" class="form-control" style="width: 100%"></textarea>
+                    @*<input type="text" id="id-con9" class="form-control" onchange="handleChange()" style="height:27px;width: 100%" />*@
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="col-md-4">
+                    <label>Term (no 13)</label>
+                </div>
+                <div class="col-md-7">
+                    <textarea cols="100" rows="4" id="id-con13" class="form-control" style="width: 100%"></textarea>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-4">
+                    <label>Date of Purchaser Fails to Fulfill Payment (no 7)</label>
+                </div>
+                <div class="col-md-7">
+                    <input type="text" id="id-con7" class="form-control" style="height:27px;width: 100%" />
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <div class="row text-center" style="margin-top: 10px;">
+            <div class="col-md-6 text-right">
+                <button class="btn btn-primary" id="btn_quo" onclick="AjaxGetQuotations()" disabled> <span class="glyphicon glyphicon-print"></span>  Quotations</button>
+            </div>
+            <div class="col-md-6 text-left">
+                <button class="btn btn-success" id="btn_att" onclick="AjaxGetAttachments()" disabled> <span class="glyphicon glyphicon-print"></span>  Attachments</button>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#id-date").kendoDatePicker({
+            format: "dd-MMM-yyyy"
+        });
+
+        $("#id-date").data("kendoDatePicker").value(new Date());
+        $("#id-date").prop("disabled", true);
+
+        //  date no 4
+        $("#id-con4").kendoDatePicker({
+            format: "dd-MMM-yyyy"
+        });
+
+        $("#id-con4").data("kendoDatePicker").value(new Date());
+        $("#id-con4").prop("disabled", true);
+
+        //  date no 5
+        $("#id-con5").kendoDatePicker({
+            format: "dd-MMM-yyyy"
+        });
+
+        $("#id-con5").data("kendoDatePicker").value(new Date());
+        $("#id-con5").prop("disabled", true);
+
+        //  date no 7
+        $("#id-con7").kendoDatePicker({
+            format: "dd-MMM-yyyy"
+        });
+
+        $("#id-con7").data("kendoDatePicker").value(new Date());
+        $("#id-con7").prop("disabled", true);
+
+    })
+
+    function handleChange() {
+        var l_title = $('#id-title').val(),
+            l_to = $('#id-to').val(),
+            l_doc = $('#id-docno').val(),
+            l_con3 = $('#id-con3').val(),
+            l_con9 = $('#id-con9').val()
+
+        if (l_title.length != 0 && l_to.length != 0 && l_doc != 0 && l_con3.length != 0 && l_con9.length != 0) {
+            $('#btn_quo').prop("disabled", false);
+            $('#btn_att').prop("disabled", false);
+        }
+        else {
+            $('#btn_quo').prop("disabled", true);
+            $('#btn_att').prop("disabled", true);
+        }
+    }
+
+    function AjaxGetQuotations() {
+        var fullname = $("#id-gender").data("kendoDropDownList").text() + " " + $('#id-to').val()
+
+        var f_title = $('#id-title').val()
+        var f_to = fullname
+        var f_docno = $('#id-docno').val()
+        var f_date = $('#id-date').val()
+        var    f_no3 = $('#id-con3').val()
+        var     f_no4 = $('#id-con4').val()
+        var    f_no5 = $('#id-con5').val()
+        var    f_no7 = $('#id-con7').val()
+        var    f_no9 = $('#id-con9').val()
+        var     f_no10 = $('#id-con10').val()
+        var    f_no11 = $('#id-con11').val()
+        var    f_no12 = $('#id-con12').val()
+        var     f_no13 = $('#id-con13').val()
+        var url_new = $('#urlPath').val() + "/Quotations/Report_hQuotations?TITLE=" + f_title + "&TO=" + f_to + "&DOC=" + f_docno + "&DATE=" + f_date + "&NO3=" + f_no3 + "&NO4=" + f_no4 + "&NO5=" + f_no5 + "&NO7=" + f_no7 + "&NO9=" + f_no9 + "&NO10=" + f_no10 + "&NO11=" + f_no11 + "&NO12=" + f_no12 + "&NO13=" + f_no13;
+        console.log(url_new);
+        Full_Print_Quotations(url_new)
+    }
+
+    function AjaxGetAttachments() {
+        var fullname = $("#id-gender").data("kendoDropDownList").text() + " " + $('#id-to').val()
+
+        var f_title = $('#id-title').val(),
+            f_to = fullname,
+            f_docno = $('#id-docno').val(),
+            f_date = $('#id-date').val()
+
+        Full_Print_Quotations($('#urlPath').val() + "/Quotations/Report_dQuotations?TITLE=" + f_title + "&TO=" + f_to + "&DOC=" + f_docno + "&DATE=" + f_date)
+    }
+
+    function Full_Print_Quotations(url) {
+        params = 'width=' + screen.width;
+        params += ', height=' + screen.height;
+        params += ', top=0, left=0'
+        params += ', fullscreen=yes';
+
+
+        newwin = window.open(url, 'FullWindowAll', params);
+        if (window.focus) {
+            newwin.focus()
+        }
+        return false;
+    }
+
+
+    $("#id-gender").kendoDropDownList({
+        dataTextField: "GEN_NAME",
+        dataValueField: "GEN_ID",
+        dataSource: [
+            { GEN_ID: 1, GEN_NAME: 'Mr.' },
+            { GEN_ID: 2, GEN_NAME: 'Mrs.' },
+        ],
+        filter: "contains",
+        index: 0
+    });
+
+</script>

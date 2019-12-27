@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Integrated System Used Equipment Dashboard";
+    ViewBag.dashboard = "Cancel Demob";
+    ViewBag.dashboardSmall = "";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    ViewBag.pathParent = Url.Content("~").Substring(0, Url.Content("~").Length - 1);
+}
+<input type="hidden" id="urlPath" name="urlPath" value="@ViewBag.pathParent" />
+
+<div class="panel panel-flat" style="margin-top:10px">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div id="gridCancelDemob"></div>
+            </div>
+        </div><br />
+        <div class="col-md-12" style="height:0px;">
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12" id="wnd_cancel_demob" style="display:none">
+    <input type="hidden" id="flag_upload" />
+    <div class="panel panel-info">
+        <div class="panel-heading" style="font-size:15px; text-align:left; font-family:Helvetica;">Cancel Demob</div>
+        <div class="panel-body clearfix">
+            <div class="form-group">
+                <br>    
+                <label class="control-label col-md-12" style="width:80px;">CN:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_cn" style="width: 100%; height:50%; background-color: #ececec" class="form-control" disabled />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px;">SN:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_sn" style="width: 100%; height:50%; background-color: #ececec" class="form-control" disabled />
+                </div>
+            </div><br>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px;">PO Price Darat:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_po_price_darat" style="width: 100%; height:50%; background-color: #ececec" class="form-control" placeholder="Price Darat" disabled />
+                    <input type="text" id="txt_po_price_darat_desc" style="width: 100%; height:50%; background-color: #ececec; margin-top:5px" class="form-control" placeholder="PO Darat" disabled />
+                    <button class="btn btn-mdb-color btn-rounded btn-sm my-0 ml-sm-2 waves-effect waves-light" type="button" id="btn_price_darat" onclick="findPrice(1)" style="background:#00bcd4; color:white; margin-top: 5px">Search</button>
+                 </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px;">PO Price Laut:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_po_price_laut" style="width: 100%; height:50%; background-color: #ececec" class="form-control" placeholder="Price Laut" disabled />
+                    <input type="text" id="txt_po_price_laut_desc" style="width: 100%; height:50%; background-color: #ececec; margin-top:5px" class="form-control" placeholder="PO Laut" disabled />
+                    <button class="btn btn-mdb-color btn-rounded btn-sm my-0 ml-sm-2 waves-effect waves-light" type="button" id="btn_price_laut" onclick="findPrice(2)" style="background:#00bcd4; color:white; margin-top: 5px">Search</button>
+                </div>
+            </div><br>
+            <div class="form-group">
+                <br>
+                <label class="control-label col-md-12" style="width:80px; margin-top:20px">Price/Unit Darat:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_price_unit_darat" style="width: 100%; height:50%; margin-top:20px" class="form-control"  />
+                </div>
+                <div class="col-md-1"></div>
+                <label class="control-label col-md-12" style="width:80px; margin-top:20px">Price/Unit Laut:</label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_price_unit_laut" style="width: 100%; height:50%; margin-top:20px" class="form-control"  />
+                </div>
+            </div><br>
+            <div class="form-group"><br>
+                <label class="control-label col-md-12" style="width:80px;"></label>
+                <div class="col-md-3">
+                    <input type="text" id="txt_total_est_plan_repair" placeholder="Total est plan repair" style="width: 100%; height:50%; margin-left:100px" class="form-control" />
+                </div><div class="col-md-4"></div>
+                <div class="col-md-3">    
+                    <label class="control-label col-md-12 flag_abr" style="width:180px;" id="file_abr_desc">ABR File (PDF)</label>  
+                    <input type="file" id="txt_abr_file" accept=".pdf" />              
+                    @*<input type="text" id="txt_abr_file" placeholder="ABR File" style="width: 100%; height:50%; margin-left:33px" class="form-control" accept=".pdf"/>*@
+                </div>
+            </div><br>
+            <div class="col-md-12" style="height:45px;">
+            </div>
+            <br><br>
+            <div style="text-align:left; padding-left:10px">
+                <button id="btn_save" class="btn btn-primary save" onclick="save()">Save <span class="glyphicon glyphicon-save"></span></button>
+                <button id="btn_cancel" class="btn btn-secondary cancel" onclick="cancel()"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+            </div><br />
+        </div>
+    </div>
+</div>
+
+<div class="col-md-12" id="wnd_POPrice" style="display:none">
+    <div id="grid_po_price"></div>
+</div>
+
+<script id="tmplt_btn_upload" type="text/x-kendo-tmpl">
+    <a href="javascript:void(0)"><span id="btn_upload_abr#=ABR_PATH_FILE#" class="label label-success" onclick="UploadABR()" style="font-weight:bold"><i class="glyphicon glyphicon-upload"></i>&nbsp;Upload</span></a>
+</script>
+
+<script type="text/javascript" src="@ViewBag.pathParent/Js/CancelDemob.js"></script>
